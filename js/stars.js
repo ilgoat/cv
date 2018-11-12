@@ -32,6 +32,7 @@ function init() {
     //获取context
 
     context = stars.getContext("2d");
+    context.font = "35px Georgia"
 }
 
 
@@ -39,63 +40,28 @@ function init() {
 //创建一个星星对象
 
 var Star = function () {
-
     this.x = windowWidth * Math.random(); //横坐标
-
     this.y = 5000 * Math.random(); //纵坐标
-
     this.text = "."; //文本
-
     this.color = "white"; //颜色
-
-
-
     //产生随机颜色
-
     this.getColor = function () {
-
-
-
         var _r = Math.random();
-
-
-
         if (_r < 0.5) {
-
             this.color = "#333";
-
         } else {
-
             this.color = "white";
-
         }
-
-
-
     }
-
-
-
     //初始化
-
     this.init = function () {
-
         this.getColor();
-
     }
-
     //绘制
-
     this.draw = function () {
-
         context.fillStyle = this.color;
-
         context.fillText(this.text, this.x, this.y);
-
     }
-
-
-
 }
 
 
@@ -176,7 +142,7 @@ function playStars() {
 
 
 
-    setTimeout("playStars()", 100);
+    setTimeout("playStars()", 50);
 
 }
 
