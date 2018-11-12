@@ -13,7 +13,7 @@
     e(n)
   }
 
-  function t(e) {}
+  function t(e) { }
 
   function i() {
     window.onmousewheel = document.onmousewheel = t, document.onkeydown = n,
@@ -36,7 +36,7 @@
     }
     return classie.has(v, 'notrans') ?
       (classie.remove(v, 'notrans'), !1) :
-      m ? !1 : void(0 >= a && c ? d(0) : a > 0 && !c && d(1))
+      m ? !1 : void (0 >= a && c ? d(0) : a > 0 && !c && d(1))
   }
 
   function d(e) {
@@ -46,12 +46,13 @@
         c = !c, m = !1, e && (u = !1, l())
       }, 600)
   }
+
+
   $(window).load(function () {
     $('#preloader').delay(1e3).fadeOut('slow')
   });
   var a, c, u, m,
-    f =
-    function () {
+  f = function () {
       var e, n = -1,
         o = window.navigator.userAgent,
         t = o.indexOf('MSIE '),
@@ -64,12 +65,12 @@
       }
       return n > -1 ? n : e
     }(),
-    w = [32, 37, 38, 39, 40],
-    p = window.document.documentElement,
-    v = document.getElementById('cross-portfolio'),
-    y = v.querySelector('button.trigger'),
-    g = s();
-    u = 0 === g, i(),
+  w = [32, 37, 38, 39, 40],
+  p = window.document.documentElement,
+  v = document.getElementById('cross-portfolio'),
+  y = v.querySelector('button.trigger'),
+  g = s();
+  u = 0 === g, i(),
     g && (c = !0, classie.add(v, 'notrans'), classie.add(v, 'modify')),
     window.addEventListener('scroll', r),
     y.addEventListener(
@@ -78,7 +79,7 @@
         d('reveal')
       }),
     $('.element').typed({
-      strings: ['I\'m Backend Developer', 'I\'m Apprentice'],
+      strings: ['I\'m Backend Developer~', 'I\'m Apprentice~'],
       typeSpeed: 1,
       backSpeed: 1,
       backDelay: 1e3,
@@ -113,5 +114,5 @@
     paginationSpeed: 400,
     singleItem: !0,
     autoPlay: 3e3
-  })
+  });
 }();

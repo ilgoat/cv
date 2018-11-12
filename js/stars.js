@@ -12,7 +12,7 @@ var starCount = 800;
 var rains = new Array();
 
 var rainCount = 7;
-
+var stars
 
 
 //初始化画布及context
@@ -21,7 +21,7 @@ function init() {
 
     //获取canvas
 
-    var stars = document.getElementById("stars");
+    stars = document.getElementById("stars");
 
     windowWidth = window.innerWidth; //当前的窗口的高度
 
