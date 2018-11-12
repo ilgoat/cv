@@ -118,12 +118,13 @@ window.onload = function () {
     init();
     img = new Image();
     img.src = "img/bg_self.jpg";
-
+    img.resize
     img.onload = function () {
-        context.drawImage(img, 0, 0);
+        //context.drawImage(img, 0, 0);
+        context.drawImage(img, 0, 0, img.width, img.height, 0, 0, stars.width, stars.height);
     }
 
-    context.drawImage(img, 0, 0);
+    context.drawImage(img, 0, 0, img.width, img.height, 0, 0, stars.width, stars.height);
     //画星星
     for (var i = 0; i < starCount; i++) {
 
@@ -160,7 +161,7 @@ window.onload = function () {
     playRains(); //绘制流星
 }
 
-
+window.addEventListener("resize", window.onload, false);
 
 //星星闪起来
 
@@ -393,7 +394,9 @@ var MeteorRain = function () {
 //绘制流星
 
 function playRains() {
-    context.drawImage(img, 0, 0);
+    //context.drawImage(img, 0, 0, );
+    context.drawImage(img, 0, 0, img.width, img.height, 0, 0, stars.width, stars.height);
+
     for (var n = 0; n < rainCount; n++) {
 
         var rain = rains[n];
