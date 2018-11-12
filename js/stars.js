@@ -117,8 +117,7 @@ function drawMoon() {
 window.onload = function () {
     init();
     img = new Image();
-    img.src = "img/bg_self.jpg";
-    img.resize
+    img.src = "img/bg_2.jpg";
     img.onload = function () {
         //context.drawImage(img, 0, 0);
         context.drawImage(img, 0, 0, img.width, img.height, 0, 0, stars.width, stars.height);
